@@ -1,0 +1,64 @@
+<!-- Beginning of Md and Up Card -->
+<div *ngIf="movie" class="card w-50 d-none d-md-block">
+  <div class="card-body">
+<!--    <div class="card-body" (click)="routeToViewMovie(movie.id)">-->
+
+    <div class="d-inline-flex w-100">
+      <div class="flex">
+        <h5 class="card-title">{{movie.title}}<span class="ml-2 card-year">({{movie.year}})</span></h5>
+        <h6 class="card-director">{{movie.director}}, {{movie.cast}}</h6>
+        <p class="card-description mt-4">{{movie.description}}</p>
+      </div>
+      <div class="ml-auto flex movie-img">
+        <img class="img img-fluid" [src]="movieImg" (error)="setDefaultPic()">
+      </div>
+    </div>
+    <div class="movie-info w-100 d-inline-flex">
+      <div class="flex">
+        <p>Rating:<span class="ml-2">{{movie.parentalRating}}</span></p>
+      </div>
+      <div class="flex ml-5">
+        <p>Duration:<span class="ml-2">{{movie.duration}} min.</span></p>
+      </div>
+      <div class="flex ml-5">
+        <p>Total Gross:<span class="ml-2">{{movie.totalGross | currency}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Md and Up Card -->
+<!-- Beginning of Small Card -->
+<div *ngIf="movie" class="card w-100 d-block d-md-none">
+<!--  <div class="card-body" (click)="routeToViewMovie(movie.id)">-->
+    <div class="card-body">
+    <div class="d-inline-flex w-100">
+      <div class="flex">
+        <h5 class="card-title mb-0 pb-0">{{movie.title}}</h5>
+        <h5 class="card-title"><span class="ml-2 card-year">({{movie.year}})</span></h5>
+      </div>
+      <div class="ml-auto flex movie-img">
+        <img class="img img-fluid" [src]="movieImg" (error)="setDefaultPic()">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h6 class="card-director">{{movie.director}}, {{movie.cast}}</h6>
+      </div>
+      <div class="col-12">
+        <p class="card-description mt-2">{{movie.description}}</p>
+      </div>
+    </div>
+    <div class="movie-info row mt-3">
+      <div class="col-6">
+        <p>Rating:<span class="ml-2">{{movie.parentalRating}}</span></p>
+      </div>
+      <div class="col-6">
+        <p>Duration:<span class="ml-2">{{movie.duration}} min.</span></p>
+      </div>
+      <div class="col-12">
+        <p>Total Gross:<span class="ml-2">{{movie.totalGross | currency}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Small Card -->

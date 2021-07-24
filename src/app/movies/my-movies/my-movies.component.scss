@@ -1,0 +1,22 @@
+.new-movie-card {
+  box-shadow: 0px 3px 19px #0000000D;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  .dashed-border {
+    border: 2px dashed #CCCCCC;
+  }
+  h2 {
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #CCCCCC;
+  }
+  .movie-grey {
+    color: #777777;
+  }
+}
+app-movie-card {
+  cursor: pointer;
+}

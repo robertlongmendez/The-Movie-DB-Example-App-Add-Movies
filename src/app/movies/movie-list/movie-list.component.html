@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <article>
+    <div style="box-shadow: 0 20px 50px rgb(110 0 0 / 100%);">
+      <div class="card">
+        <img class="card-img-top w-auto" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/{{ poster }}"
+          alt="Card image cap">
+        <div class="card-body">
+          <h2 class="card-title">{{ title }}</h2>
+          <hr>
+          <br>
+          <h5>Where to stream:</h5>
+          <app-streaming *ngFor="let stream of providers;" [provider]="stream.provider" [logo]="stream.logo">
+          </app-streaming>
+          <hr><br>
+          <h5>Trailers:</h5>
+          <app-trailers *ngFor="let trailer of trailers" [trailer_key]="trailer.key" [trailer_name]="trailer.name">
+          </app-trailers>
+          <hr>
+          <h5>Overview:</h5>
+          <p class="card-text">{{content}}</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

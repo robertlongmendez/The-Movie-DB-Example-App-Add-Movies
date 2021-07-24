@@ -1,0 +1,21 @@
+<span>
+  <!--  Comment out our old code, or delete, that was opening the trailer in a new window -->
+  <!--  <a href="https://www.youtube.com/embed/{{trailer_key}}?rel=0" class="btn btn-outline-primary w-100"-->
+  <!--    target="_blank">{{trailer_name}}</a>-->
+
+  <!-- Google search angular modal, first result ng-bootstrap modal -->
+  <!-- https://ng-bootstrap.github.io/#/components/modal/examples -->
+  <button class="btn btn-lg btn-outline-primary w-100" (click)="open(content)">{{trailer_name}}</button><br><br>
+  <ng-template #content let-modal class="modal-lg">
+    <div class="modal-header w-100 bg-dark">
+      <h4 class="modal-title" id="modal-basic-title">{{trailer_name}}</h4>
+    </div>
+    <div class="modal-body bg-dark" style="height: 75vh">
+      <iframe width="100%" height="100%" [src]="getSanitizedURL('https://www.youtube.com/embed/' + trailer_key)"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer bg-dark">
+      <button type="button" class="btn btn-lg btn-danger" (click)="modal.close()">Close</button>
+    </div>
+  </ng-template>
+</span>
