@@ -8,11 +8,11 @@
       </div>
   <div class="col-md-8">
     <div class="card-body">
-        <!--    <div class="card-body" (click)="routeToViewMovie(movie.id)">-->
+           <div class="card-body" (click)="routeToViewMovie(movie.id)">
 
         <div class="d-inline-flex w-100">
           <div class="flex">
-            <h5 class="card-title center bg-grey">{{movie.title}}<span class="ml-2 card-year">({{movie.year}})</span></h5>
+            <h5 class="card-title center ">{{movie.title}}<span class="ml-2 card-year">({{movie.year}})</span></h5>
             <h6 class="card-director">{{movie.director}}, {{movie.cast}}</h6>
             <p class="card-description mt-4">{{movie.description}}</p>
           </div>
@@ -34,13 +34,13 @@
   </div>
 
     </div>
-
+</div>
   </div>
 
 <!-- End of Md and Up Card -->
 <!-- Beginning of Small Card -->
 <div *ngIf="movie" class="card w-100 d-block d-md-none">
-<!--  <div class="card-body" (click)="routeToViewMovie(movie.id)">-->
+ <div class="card-body" (click)="routeToViewMovie(movie.id)">
     <div class="card-body">
     <div class="d-inline-flex w-100">
       <div class="flex">
@@ -71,5 +71,7 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>
 <!-- End of Small Card -->

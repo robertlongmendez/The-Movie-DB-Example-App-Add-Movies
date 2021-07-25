@@ -29,8 +29,8 @@ export class MovieCardComponent implements OnInit {
   }
 
   // TODO: BUILD ME!!
-  // routeToViewMovie(id: number) {
-  //   this.router.navigate([`/movies/${id}`]);
-  // }
+  routeToViewMovie(id: number) {
+    this.router.navigate([`/movies/${id}`]);
+  }
 
 }
